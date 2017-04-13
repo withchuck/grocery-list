@@ -1,0 +1,12 @@
+/* Put your css in here */
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+.header{padding-top:20px}
+[class*="col-"]{
+  margin-bottom:15px;
+}
+.item-added{
+  color: #aaa;
+  text-decoration: line-through;
+}
+.fa{margin-left:5px;}

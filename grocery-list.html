@@ -1,0 +1,15 @@
+<h5>Grocery List</h5>
+<p ng-show="items.length < 1">You currently have no items on your list. Add an item in the field above.</p>
+<div ng-repeat="item in items | orderBy:'title'">
+  <div class="row item-row">
+    <div class="col-sm-4 col-xs-12">
+      {{$index + 1}}: {{item.title}}
+    </div>
+    <div class="col-sm-4 col-xs-6">
+      <button type="button" class="btn btn-sm btn-danger" ng-click="removeFromList($index)">Remove from List<span class="fa fa-minus-circle"></span></button>
+    </div>
+    <div class="col-sm-4 col-xs-6">
+      <button type="button" class="btn btn-sm btn-success" ng-click="addToCart($index)">Put in Cart <span class="fa fa-plus-circle"></span></button>
+    </div>
+  </div>
+</div>

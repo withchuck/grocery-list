@@ -1,0 +1,15 @@
+<h5>Items in Cart</h5>
+<p ng-show="cartItems.length < 1">You currently have no items in your cart</p>
+<div ng-repeat="item in cartItems">
+  <div class="row item-row">
+    <div class="col-xs-4 item-added">
+      {{item.title}}
+    </div>
+    <div class="col-xs-4">
+      <button type="button" ng-hide="true" class="btn btn-sm" ng-click="removeFromList($index)">Remove Item</button>
+    </div>
+    <div class="col-x-4">
+      <button type="button" class="btn btn-sm" ng-click="backToList($index)">Add to List <span class="fa fa-reply"></span></button>
+    </div>
+  </div>
+</div>
